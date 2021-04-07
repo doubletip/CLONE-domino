@@ -1,0 +1,67 @@
+.container {
+	width: 120px;
+	margin: 0 auto;
+
+	.test {
+		color:red;
+	}
+}
+.container {
+	margin: 0 auto;
+	width: 1200px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.blind {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	font-size: 1rem;
+	color: transparent;
+	overflow: hidden;
+}
+
+#header {
+	height: 100px;
+	background: #fff;
+
+	.system-block {
+		position: relatve;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.logo {
+			background-image:url(../images/sp_common.png);
+		}
+	}
+
+}
+
+
+.slider {
+	position: relative;
+}
+
+.swiper-container {
+	.swiper-wrapper {}
+
+	.swiper-slide {}
+}
+
+.navigation {}

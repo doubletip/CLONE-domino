@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1440, initial-scale=1.0">
+
+	<title>도미노피자 클론코딩</title>
+
+	<link rel="stylesheet" href="./assets/css/core.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+	<div id="wrap">
+
+		<header id="header">
+			<div class="container">
+				<div class="system-block">
+					<div class="logo">
+						<h1 class="title">
+							<span class="blind">도미노피자</span>
+						</h1>
+					</div>
+					<div class="location">
+						<i class="icon"></i>
+						논현로 123길 35-1
+					</div>
+					<div class="util">
+						<ul>
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">회원가입</a></li>
+							<li>
+								<select>
+									<option value="kor">KOR</option>
+									<option value="eng">ENG</option>
+								</select>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="gnb-block">
+					<nav class="gnb">
+						<ul>
+							<li><a href="#">메뉴</a></li>
+							<li><a href="#">e-쿠폰</a></li>
+							<li><a href="#">상품권 선물</a></li>
+							<li><a href="#">이벤트 &middot; 제휴</a></li>
+							<li><a href="#">매장검색</a></li>
+						</ul>
+					</nav>
+
+					<div class="view-menu">
+						<a href="#">더보기<i class="i"></i></a>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="allmenu">
+			전체메뉴
+		</div>
+		<main id="main">
+			<section class="slider">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide"><img src="./assets/images/slider01.jpg" alt="슬라이더 01"></div>
+						<div class="swiper-slide"><img src="./assets/images/slider02.jpg" alt="슬라이더 02"></div>
+					</div>
+			</div>
+
+				<div class="navigation">
+					<button class="arrow prev" aria-label="이전 슬라이더"></button>
+					<button class="arrow next" aria-label="다음 슬라이더"></button>
+				</div>
+			</section>
+
+			<script>
+				var secSlider = new Swiper('.swiper-container', {
+					loop: true,
+					slidesPerView:2,
+					navigation: {
+						nextEl: '.slider .swiper-container .next',
+						prevEl: '.slider .swiper-container .prev',
+					},
+
+					on: {
+						init: function(swiper){
+							console.log(this.slides[this.activeIndex]);
+						},
+						slideChange: function(){
+							console.log(2);
+						}
+					},
+				});
+			</script>
+			<section class="order">
+				<div class="order__inner">
+					<ul>
+						<li>
+							<a href="#">
+								<div class="order__inner__box">
+									<img src="" alt="">
+									<h2>배달 주문</h2>
+									<p>등급별 최대 30%</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="order__inner__box">
+									<img src="" alt="">
+									<h2>배달 주문</h2>
+									<p>등급별 최대 30%</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<div class="order__inner__box">
+									<img src="" alt="">
+									<h2>배달 주문</h2>
+									<p>등급별 최대 30%</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="benefit">
+
+			</section>
+		</main>
+		<footer id="footer"></footer>
+
+	</div>
+</body>
+</html>
