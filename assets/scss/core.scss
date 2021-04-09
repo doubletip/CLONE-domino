@@ -1,5 +1,5 @@
 .container {
-	width: 120px;
+	width: 1200px;
 	margin: 0 auto;
 
 	.test {
@@ -36,21 +36,131 @@ li {
 	overflow: hidden;
 }
 
+
 #header {
-	height: 100px;
+	height: 150px;
 	background: #fff;
+	z-index: 5;
+	position: relative;
 
 	.system-block {
 		position: relatve;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
+		height: 90px;
 
 		.logo {
-			background-image:url(../images/sp_common.png);
+			background:url(../images/sp_common.png) 0 0 no-repeat;
+			width: 163px;
+			height: 40px;
+		}
+
+		.location {
+			position: relative;
+			padding-bottom: 5px;
+			border-bottom: 1px solid black;
+			width: 350px;
+			padding-left: 25px;
+
+			a {
+				color: black;
+				display: block;
+			}
+
+			:before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				left: -5px;
+				background: url(../images/sp_common.png) -155px 0px no-repeat;
+				width: 35px;
+				height: 40px;
+			}
+		}
+
+		.util {
+			ul {
+				display: flex;
+				align-items: center;
+			}
+
+			li {
+				padding-left: 15px;
+			}
+
+			a {
+				color: black;
+			}
+
+			select {
+				border: 1px solid #ccc;
+				border-radius: 10px;
+				padding: 5px 10px;
+			}
+		}
+
+
+	}
+
+	.gnb-block {
+		display: flex;
+		justify-content: space-between;
+		height: 60px;
+		align-items: center;
+		position: relative;
+
+		.gnb {
+			ul {
+				display: flex;
+			}
+
+			li {
+				padding-right: 50px;
+			}
+
+			li:hover a {
+				border-bottom:1px solid black;
+			}
+
+			a {
+				color: black;
+			}
+		}
+
+		.view-menu {
+
+
+			a {
+				color: black;
+			}
+
+			i {
+				transition: all 0.5s;
+			}
+
+			i.toggle__arrow {
+				transform: rotate(180deg);
+			}
 		}
 	}
 
+}
+
+.allmenu {
+	height: 300px;
+	background: #fff;
+	transform: translateY(-350px);
+	transition: all 0.5s;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+}
+
+.allmenu.toggle__allMenu {
+	transform: translateY(0px);
 }
 
 
@@ -62,6 +172,49 @@ li {
 	.swiper-wrapper {}
 
 	.swiper-slide {}
+
+	.slider__bottom__info {
+		display: inline-block;
+		width: 100px;
+		height: 40px;
+		position: absolute;
+		bottom: 29px;
+		left: 50%;
+		transform: translate(-50%);
+		z-index: 5;
+		background: #ccc;
+		border-radius: 50px;
+	}
+
+	.swiper-pagination-fraction {
+		bottom: 10px;
+		left: -10px;
+		color: #fff;
+	}
+
+	.swiper-pause {
+		position: absolute;
+		bottom: 12px;
+		right: 15px;
+		z-index: 10;
+		color:#fff;
+		transition:all 0.5s;
+		cursor: pointer;
+		font-size: 12px;
+	}
+	.swiper-play {
+		position: absolute;
+		bottom: 12px;
+		right: 15px;
+		z-index: 10;
+		color: #fff;
+		transition:all 0.5s;
+		cursor: pointer;
+		font-size: 12px;
+	}
 }
+
+
+
 
 .navigation {}

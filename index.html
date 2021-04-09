@@ -9,7 +9,10 @@
 
 	<link rel="stylesheet" href="./assets/css/core.min.css">
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 </head>
 <body>
 	<div id="wrap">
@@ -23,8 +26,10 @@
 						</h1>
 					</div>
 					<div class="location">
-						<i class="icon"></i>
-						논현로 123길 35-1
+						<a href="#">
+							<i class="icon"></i>
+							주변 매장의 프로모션을 확인해보세요!
+						</a>
 					</div>
 					<div class="util">
 						<ul>
@@ -51,14 +56,16 @@
 					</nav>
 
 					<div class="view-menu">
-						<a href="#">더보기<i class="i"></i></a>
+						<a href="#">더보기 <i class="fas fa-chevron-up"></i></a>
 					</div>
 				</div>
 			</div>
 		</header>
 
 		<div class="allmenu">
-			전체메뉴
+			<div class="container">
+				전체메뉴 z-index ???
+			</div>
 		</div>
 		<main id="main">
 			<section class="slider">
@@ -66,8 +73,20 @@
 					<div class="swiper-wrapper">
 						<div class="swiper-slide"><img src="./assets/images/slider01.jpg" alt="슬라이더 01"></div>
 						<div class="swiper-slide"><img src="./assets/images/slider02.jpg" alt="슬라이더 02"></div>
+						<div class="swiper-slide"><img src="./assets/images/slider02.jpg" alt="슬라이더 02"></div>
+						<div class="swiper-slide"><img src="./assets/images/slider02.jpg" alt="슬라이더 02"></div>
+						<div class="swiper-slide"><img src="./assets/images/slider02.jpg" alt="슬라이더 02"></div>
+						<div class="swiper-slide"><img src="./assets/images/slider02.jpg" alt="슬라이더 02"></div>
 					</div>
-			</div>
+
+					<div class="slider__bottom__info">
+						<div class="swiper-pagination"></div>
+
+						<div class="swiper-pause"><i class="fas fa-pause"></i></div>
+						<div class="swiper-play"><i class="fas fa-play"></i></div>
+					</div>
+
+				</div>
 
 				<div class="navigation">
 					<button class="arrow prev" aria-label="이전 슬라이더"></button>
@@ -75,53 +94,39 @@
 				</div>
 			</section>
 
-			<script>
-				var secSlider = new Swiper('.swiper-container', {
-					loop: true,
-					slidesPerView:2,
-					navigation: {
-						nextEl: '.slider .swiper-container .next',
-						prevEl: '.slider .swiper-container .prev',
-					},
 
-					on: {
-						init: function(swiper){
-							console.log(this.slides[this.activeIndex]);
-						},
-						slideChange: function(){
-							console.log(2);
-						}
-					},
-				});
-			</script>
 			<section class="order">
 				<div class="order__inner">
 					<ul>
 						<li>
 							<a href="#">
 								<div class="order__inner__box">
-									<img src="" alt="">
+									<span></span>
 									<h2>배달 주문</h2>
-									<p>등급별 최대 30%</p>
+									<span></span>
 								</div>
 							</a>
+							<p>등급별 최대 30%</p>
 						</li>
 						<li>
 							<a href="#">
 								<div class="order__inner__box">
-									<img src="" alt="">
-									<h2>배달 주문</h2>
-									<p>등급별 최대 30%</p>
+									<span></span>
+									<h2>포장 주문</h2>
+									<span></span>
 								</div>
 							</a>
+							<p>등급별 최대 40%</p>
 						</li>
 						<li>
 							<a href="#">
 								<div class="order__inner__box">
-									<img src="" alt="">
-									<h2>배달 주문</h2>
-									<p>등급별 최대 30%</p>
+									<span></span>
+									<h2>퀵 오더</h2>
+									<span></span>
 								</div>
+								<p>자주 이용하는 메뉴를 <br>
+									더 빠르게 주문해보세요!</p>
 							</a>
 						</li>
 					</ul>
@@ -134,5 +139,25 @@
 		<footer id="footer"></footer>
 
 	</div>
+
+	<script>
+
+
+
+		$(function(){
+
+
+			var viewMenu = $(".view-menu a");
+			var allMenu = $(".allmenu");
+			var viewMenuIcon = $(".view-menu a i");
+
+			viewMenu.click(function(){
+				viewMenuIcon.toggleClass("toggle__arrow");
+				allMenu.toggleClass("toggle__allMenu")
+			});
+		});
+	</script>
+
+	<script src="./assets/js/swiper.js"></script>
 </body>
 </html>
