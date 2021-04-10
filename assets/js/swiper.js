@@ -1,12 +1,12 @@
-var secSlider = new Swiper('.swiper-container', {
+var secSlider = new Swiper('.swiper1', {
 	loop: true,
 	autoplay: {
 		delay:3000,
 	},
 	slidesPerView:1,
 	navigation: {
-		nextEl: '.slider .swiper-container .next',
-		prevEl: '.slider .swiper-container .prev',
+		nextEl: '.navigation .next',
+		prevEl: '.navigation .prev',
 	},
 
 	pagination: {
@@ -23,6 +23,21 @@ var secSlider = new Swiper('.swiper-container', {
 		}
 	},
 });
+
+
+
+var benefitSlider = new Swiper('.swiper2', {
+	slidesPerView: 3,
+	spaceBetween: 5,
+	freemode: true,
+	navigation: {
+		nextEl: '.navigation .next',
+		prevEl: '.navigation .prev',
+	},
+
+
+});
+
 
 $(".swiper-play").hide();
 
