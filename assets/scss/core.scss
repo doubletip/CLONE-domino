@@ -608,3 +608,182 @@ li {
 
 	}
 }
+
+
+
+.store__search {
+
+	margin-top: 50px;
+
+	.store__search__title {
+
+		position: relative;
+		border-bottom: 1px solid black;
+		padding-bottom: 20px;
+
+		h2 {
+			font-size: 26px;
+		}
+
+		span {
+			position: absolute;
+			right: 0;
+			top: 10px;
+			font-size: 13px;
+		}
+	}
+
+	.store__search__content {
+
+		padding-top: 50px;
+
+		.allstoreview {
+			display: flex;
+    		justify-content: flex-end;
+
+			a {
+				padding: 5px 15px;
+				background: black;
+				color: white;
+				font-size: 13px;
+			}
+		}
+
+		.store__search__content__inner {
+
+			display: flex;
+			margin-top: 20px;
+
+			.store__search__box {
+
+				width: 500px;
+
+				.store__search__tab {
+
+					ul {
+						display: flex;
+					}
+					li {
+						width: 50%;
+						text-align: center;
+						background: #ccc;
+						padding: 10px 0;
+					}
+					a {
+						color: black;
+					}
+				}
+
+				.store__search__selectbox {
+
+					padding: 40px 20px 20px 20px;
+					display: flex;
+					justify-content: space-between;
+
+					.store__search__select1 {
+					}
+					.store__search__select2 {
+					}
+					select {
+						border: 1px solid #ccc;
+						padding: 10px;
+						color: black;
+						width: 200px;
+					}
+					option {
+						color:#ccc;
+					}
+					.store__search__btn {
+						background: black;
+						width: 40px;
+						height: 40px;
+						button {}
+					}
+				}
+
+				.store__search__option {
+					display: flex;
+					padding: 0 20px;
+
+					.on__off {
+						background: #ccc;
+						position:relative;
+						padding: 2px 2px 2px 30px;
+						border-radius: 20px;
+						margin-left: 20px;
+
+						a {
+							color: #fff;
+						}
+
+						&:after {
+							position:absolute;
+							content:"";
+							width: 30px;
+							height: 30px;
+							border-radius: 50%;
+							border: 1px solid #ccc;
+							left: -4px;
+							background: white;
+							top: -3px;
+						}
+					}
+
+					.text {
+						color: #ccc;
+						padding-left: 20px;
+					}
+
+					.info {
+						color: red;
+						margin-left: auto;
+					}
+				}
+
+				.store__search__list {
+
+					padding: 30px 20px;
+					display: flex;
+					justify-content: space-between;
+
+					.left {
+						p {
+							color: black;
+						}
+						a {
+							padding: 10px 15px;
+							color: white;
+							display: inline-block;
+							margin-top: 30px;
+						}
+						.view {
+							background: #ccc;
+						}
+						.visit {
+							background: black;
+						}
+					}
+
+					.right {
+
+						display:flex;
+
+						.img__box {
+							width: 100px;
+							height: 100px;
+							border-radius: 50%;
+							color: white;
+							background: red;
+						}
+					}
+				}
+			}
+
+			.store__search__map {
+				width: 700px;
+				background: black;
+				height: 600px;
+			}
+		}
+	}
+}

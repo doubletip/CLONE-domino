@@ -27,8 +27,8 @@ var secSlider = new Swiper('.swiper1', {
 
 
 var benefitSlider = new Swiper('.swiper2', {
-	slidesPerView: 3,
-	spaceBetween: 5,
+	slidesPerView: 3.5,
+	spaceBetween: 80,
 	freemode: true,
 	navigation: {
 		nextEl: '.navigation .next',
